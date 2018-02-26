@@ -21,6 +21,7 @@
         "@stencil/router": "latest"
     },
     "devDependencies": {
+        "semver": "^4.3.2",
         "@stencil/dev-server": "latest",
         "@stencil/sass": "0.0.2",
         "@stencil/utils": "latest",
