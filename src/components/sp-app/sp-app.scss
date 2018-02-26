@@ -1,0 +1,379 @@
+sp-app {
+    .page-banner {
+        position: relative;
+        display: block;
+        background: rgb(254,255,255);
+        background: -moz-radial-gradient(center, ellipse cover, rgba(254,255,255,1) 0%, rgba(204,204,204,1) 100%);
+        background: -webkit-radial-gradient(center, ellipse cover, rgba(254,255,255,1) 0%,rgba(204,204,204,1) 100%);
+        background: radial-gradient(ellipse at center, rgba(254,255,255,1) 0%,rgba(204,204,204,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffff', endColorstr='#cccccc',GradientType=1 );
+        min-height: 300px;
+        max-height: 80vh;
+        overflow: hidden;
+        img {
+            display: block;
+            width: 100%;
+        }
+        iframe {
+            display: block;
+            width: 100%;
+            height:600px;
+        }
+        ft-waves {
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+    }
+
+    ion-menu {
+        ion-content ion-list {
+            padding-top: 65px !important;
+        }
+        a.item {
+            position: relative;
+            font-weight: bold;
+            &:hover {
+                cursor: pointer;
+                text-decoration: none;
+                .item-inner {
+                    border-bottom-color: var(--theme-primary);
+                }
+            }
+
+            .item-inner {
+                border-bottom-width: 2px !important;
+                .input-wrapper {
+                    font-family: 'Fjalla One', sans-serif !important;
+                    color: #333;
+                }
+            }
+
+            ion-icon {
+                position: absolute;
+                right: 15px;
+                top: 10px;
+                display: block;
+                height: 25px;
+                width: 25px;
+                svg {
+                    display: block;
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+        }
+        .sub-item {
+            //display: none;
+            a.item {
+                &:before {
+                    content: "└";
+                    color: #cccccc !important;
+                    position: absolute;
+                    font-size: 20px;
+                    top: 10px;
+                    font-weight: bold;
+                    left: 20px;
+                }
+                .input-wrapper {
+                    text-indent: 25px;
+                }
+            }
+        }
+
+        .active {
+            a.item .item-inner .input-wrapper{
+                color: var(--theme-primary);
+            }
+        }
+
+        &.showing {
+            display: block;
+        }
+
+        #partners {
+            img {
+                display: block;
+                margin: 0 auto;
+            }
+        }
+
+        a.made-by {
+            font-size: 12px;
+            font-weight: bold;
+            display: block;
+            width: 100%;
+            text-align: center;
+            color: #999;
+            line-height: 20px;
+            text-decoration: none;
+            span {
+                display: inline-block;
+                height: 15px;
+                width: 22px;
+                background: #999;
+                color: #fff;
+                font-size: 15px;
+                line-height: 15px;
+                text-align: center;
+                -webkit-mask-image: url('/assets/images/madness-labs-logo.svg');
+                -webkit-mask-repeat: no-repeat;
+                -webkit-mask-position: center;
+                -moz-mask-image: url('/assets/images/madness-labs-logo.svg');
+                -moz-mask-repeat: no-repeat;
+                -moz-mask-position: center;
+                mask-image: url('/assets/images/madness-labs-logo.svg');
+                mask-repeat: no-repeat;
+                mask-position: center;
+            }
+
+            &:hover {
+                color: var(--theme-primary);
+                span {
+                    -webkit-mask-image: none;
+                    -moz-mask-image: none;
+                    mask-image: none;
+                    background: url('/assets/images/madness-labs-logo.svg') no-repeat center;
+                    color: transparent;
+                } 
+            }
+        }
+    }
+
+    #page-content {
+        top: 14px;
+        transform: none !important;
+        ion-scroll {
+            background-color: transparent;
+        }
+        ion-card#content-card {
+            padding: 10px;
+            display: block;
+            max-width: 90 0px;
+            width: 90%;
+            margin: -70px auto 30px;
+            h1 {
+                font-size: 48px;
+                color: var(--theme-primary);
+                font-family: 'Fjalla One', sans-serif;
+                text-transform: uppercase;
+                margin-top: 3px;
+            }
+
+            h2 {
+                font-family: 'Fjalla One', sans-serif;
+                color: var(--theme-primary);
+                font-size: 18px;
+            }
+
+            h3 {
+                font-family: 'Fjalla One', sans-serif;
+                color: #000;
+                font-size: 18px;
+            }
+
+            h4 {
+                font-family: 'Fjalla One', sans-serif;
+                color: #666;
+                font-size: 16px;
+            }
+
+            div[slot='card'] {
+                h2 {
+                    margin-top: 15px;
+                }
+                p {
+                    padding: 10px;
+                }
+            }
+        }
+    }
+
+    aside.sidebar {
+        .widget {
+            display: block;
+            width: 100%;
+            margin: 0 0 30px 0;
+            background-color: #eee;
+            padding: 10px;
+            h3 {
+                border-bottom: 2px solid var(--theme-primary);
+                font-size: 16px;
+                font-weight: bold;
+                padding-bottom: 5px;
+            }
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                li {
+                    a {
+                        display: block;
+                        width: 100%;
+                        padding: 5px;
+                        border-bottom: 1px solid #ccc;
+                        text-decoration: none;
+                        &:hover {
+                            cursor: pointer;
+                            border-bottom-color: var(--theme-primary);
+                            font-weight: bold;
+                        }
+                    }
+                    &:last-of-type {
+                        a {
+                            border-bottom: none;
+                        }
+                    }
+                }
+            }
+            table {
+                width: 100%;
+            }
+            &.widget_calendar {
+                tbody td {
+                    text-align: center;
+                    padding: 3px;
+                    a {
+                        display: block;
+                        width: 100%;
+                        text-decoration: none;
+                        &:hover {
+                            cursor: pointer;
+                            font-weight: bold;
+                        }
+                    }
+                }
+                caption {
+                    padding: 8px;
+                    color: var(--theme-primary);
+                    font-weight: bold;
+                }
+                tfoot {
+                    a {
+                        
+                        display: block;
+                        width: 90%;
+                        color: var(--theme-primary);
+                        border: 2px solid var(--theme-primary);
+                        margin: 10px auto 5px auto;
+                        padding: 5px;
+                        text-decoration: none;
+                        text-align: center;
+                        &:hover {
+                            cursor: pointer;
+                            color: #fff;
+                            background: var(--theme-primary);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+        color: #fff;
+        background: rgb(3,114,186);
+        background: -moz-linear-gradient(top, rgba(3,114,186,1) 0%, rgba(2,70,112,1) 20%);
+        background: -webkit-linear-gradient(top, rgba(3,114,186,1) 0%,rgba(2,70,112,1) 20%);
+        background: linear-gradient(to bottom, rgba(3,114,186,1) 0%,rgba(2,70,112,1) 20%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0372ba', endColorstr='#024670',GradientType=0 );
+        [slot="footer"] {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+        }
+        .widget {
+            margin: 0 15px 30px 15px;
+            position: relative;
+            flex-basis: 0;
+            flex-grow: 1;
+            width: 100%;
+            min-height: 1px;
+            min-width: 250px;
+            box-shadow: -2px -2px 4px rgba(0, 0, 0, 0.4) inset;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.6);
+             h3 {
+                margin-top: 3px;
+                border-bottom: 2px solid var(--theme-primary);
+                font-size: 16px;
+                font-weight: bold;
+                padding-bottom: 5px;
+                color: #FFF;
+            }
+        }
+        .widget_sitemap {
+            max-width: 500px;
+            overflow: hidden;
+            height: 100px;
+            padding-bottom: 50px;
+            h3 {
+                position: relative;
+                &:after {
+                    content: '▼';
+                    position: absolute;
+                    right: 10px;
+                    top: 0px;
+                }
+            }
+
+            &.expanded {
+                height: auto;
+                overflow: visible;
+                h3:after {
+                    content: '▲';
+                }
+            }
+
+            &:before {
+                content: "The Flood Team 2018 ©";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                display: block;
+                width: 100%;
+                height: 50px;
+                text-align: center;
+                line-height: 50px;
+                background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 30%, rgba(0,0,0,0.8) 100%);
+                background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 30%,rgba(0,0,0,0.8) 100%);
+                background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 30%,rgba(0,0,0,0.8) 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#cc000000',GradientType=0 );
+            }
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    @media (max-width: 800px) {
+        ion-menu ion-content ion-list {
+            padding-top: 100px !important;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .page-banner iframe {
+            height: 400px;
+        }
+    }
+
+    @media (max-width: 400px) {
+        .page-banner {
+            ft-waves {
+                bottom: -8px;
+            }
+            iframe {
+                height: 300px;
+            }
+        }
+    }
+}

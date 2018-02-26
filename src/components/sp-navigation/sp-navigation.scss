@@ -1,0 +1,95 @@
+sp-navigation {
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        display: block;
+        min-height: 60px;
+        background-color: #fff;
+        z-index: 99;
+        box-shadow: 0 3px 5px 1px rgba(0, 0, 0, 0.2);
+
+        ion-grid.grid, ion-col {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        .brand {
+            position: absolute;
+            top: 0;
+            left: 0;
+            ion-icon {
+                position: absolute;
+                top: 13px;
+                left: -15px;
+                display: block;
+                height: 35px;
+                width: 35px;
+                svg {
+                    display: block;
+                    height: 35px;
+                    width: 35px;
+                }
+            }   
+            
+            img {
+                height: 50px;
+                margin: 5px 20px;
+            }
+        }
+
+        h2 {
+            font-family: 'Fjalla One', sans-serif;
+            margin: 18px auto 10px auto;
+            display: block;
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            color: #000;
+        }
+
+        .call-button {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+
+            .button {
+                background-color: var(--theme-primary);
+            }
+
+            .button-inner {
+                font-family: 'Fjalla One', sans-serif;
+                letter-spacing: 2px;
+                font-size: 18px;
+                font-weight: bold;
+            }
+
+            .icon svg {
+                padding-top: 2px;
+                height: 22px;
+                width: 22px;
+            }
+        }
+    }
+
+    @media (max-width: 800px) {
+        header {
+            h2 {
+                font-size: 16px;
+                margin-top: 65px;
+            }
+        }
+    }
+
+    @media (max-width: 400px) {
+        header .call-button {
+            .button-inner {
+                font-size: 16px;
+                letter-spacing: 1px;
+            }
+        }
+    }
+}

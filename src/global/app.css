@@ -1,0 +1,42 @@
+/* Theme Variables */
+:root {
+  --theme-primary: #0372ba;
+}
+
+/* Document Level Styles */
+* {
+  font-family: 'robotoregular', sans-serif;
+}
+
+.item *:focus {
+  outline: none !important;
+}
+
+.list-md .item-input.item-input-has-focus:last-child {
+  border-bottom-color: var(--theme-primary);
+  box-shadow: inset 0 -1px 0 0 var(--theme-primary);
+}
+
+/* body {
+  margin: 0px;
+  padding: 0px;
+  font-family: sans-serif;
+  overflow: visible;
+  height: auto;
+  max-height: auto;
+  background-color: var(--theme-primary);
+  position: inherit;
+} */
+
+ion-app.app {
+  background-color: var(--theme-primary);
+}
+
+a {
+  color: var(--theme-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

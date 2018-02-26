@@ -1,0 +1,53 @@
+{
+    "name": "@enjin/stencilpress",
+    "private": false,
+    "version": "1.0.0",
+    "description": "StencilPress is a WordPress theme starter made with StencilJS web components by the good people at Madness Labs.",
+    "files": [
+        "dist/"
+    ],
+    "scripts": {
+        "build": "stencil build --prerender",
+        "dev": "sd concurrent \"stencil build --dev --watch\" \"stencil-dev-server\" ",
+        "devWithSW": "sd concurrent \"stencil build --dev --service-worker --watch\" \"stencil-dev-server\" ",
+        "serve": "stencil-dev-server",
+        "start": "npm run dev",
+        "test": "jest --no-cache",
+        "test.watch": "jest --watch --no-cache"
+    },
+    "dependencies": {
+        "@ionic/core": "0.0.2-65",
+        "@stencil/core": "0.6.1",
+        "@stencil/router": "latest"
+    },
+    "devDependencies": {
+        "@stencil/dev-server": "latest",
+        "@stencil/sass": "0.0.2",
+        "@stencil/utils": "latest",
+        "@types/jest": "^21.1.1",
+        "jest": "^21.2.1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/madnesslabs/stencilpress.git"
+    },
+    "author": "Madness Labs",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/madnesslabs/stencilpress"
+    },
+    "homepage": "https://github.com/madnesslabs/stencilpress",
+    "jest": {
+        "transform": {
+            "^.+\\.(js|ts|tsx)$": "<rootDir>/node_modules/@stencil/core/testing/jest.preprocessor.js"
+        },
+        "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(tsx?|jsx?)$",
+        "moduleFileExtensions": [
+            "ts",
+            "tsx",
+            "js",
+            "json",
+            "jsx"
+        ]
+    }
+}
